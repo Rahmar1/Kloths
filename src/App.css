@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+body{
+    background-color:aliceblue;
+}
+*{
+    font-family: "Inter", serif; 
+}
+@layer utilities {
+    .text-stroke {
+      -webkit-text-stroke: 2px black; 
+      color: transparent; 
+    }
+  }
