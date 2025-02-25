@@ -6,6 +6,9 @@ body{
 *{
     font-family: "Inter", serif; 
 }
+button{
+  outline: 0px ;
+}
 @layer utilities {
     .text-stroke {
       -webkit-text-stroke: 2px black; 

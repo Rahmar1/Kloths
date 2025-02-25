@@ -43,7 +43,7 @@ const Products = () => {
         {["all", "men's clothing", "women's clothing", "jewelery"].map((cat) => (
           <button
             key={cat}
-            className={`px-6 py-2 rounded-full transition max-md:px-4 ${
+            className={` px-6 py-2 rounded-full transition max-sm:px-2 max-sm:py-1 max-sm:text-sm ${
               category === cat
                 ? "bg-black text-white"
                 : "bg-gray-200  hover:bg-pink-600 transition  hover:text-white"

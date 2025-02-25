@@ -40,7 +40,7 @@ const Card = () => {
             </div>
             
 
-            <div className="container grid grid-cols-2 my-30 max-lg:grid-cols-1 bg">
+            <div className="container grid grid-cols-2 my-30 max-lg:grid-cols-1 bg justify-self-center">
                 <div>
                     <img src={product.image} alt={product.title} className="w-120 h-auto border-2 border-pink-200 rounded-3xl p-2 mx-auto mb-4" />
                 </div>

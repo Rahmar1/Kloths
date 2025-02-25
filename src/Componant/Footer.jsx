@@ -8,7 +8,7 @@ const Footer = () => {
     const navigate = useNavigate();
     return (
         <div className='bg-black h-auto w-auto '>
-            <div className='grid grid-cols-6 gap-3  text-white p-10 max-lg:grid-cols-4 max-md:grid-cols-3 '>
+            <div className='grid grid-cols-6 gap-3  text-white p-10 max-lg:grid-cols-4 max-md:grid-cols-2 '>
                 {/**div  1 */}
                 <div className='col-span-2'>
                     <h1 className='mb-10 mt-2 text-2xl font-medium'>Our Newsletter</h1>
@@ -17,7 +17,7 @@ const Footer = () => {
                         <button className='w-15 h-15 text-2xl text-white  bg-pink-500 rounded-br-2xl rounded-tr-2xl cursor-pointer hover:bg-white hover:text-black'onClick={() => navigate('/Contact')}><FontAwesomeIcon icon={faArrowTrendUp} /> </button>
                     </div>
 
-                    <div className='text-white py-5'>
+                    <div className='text-white py-5 '>
                       <a href='https://www.facebook.com/'target="_blank"><span className='border-2 border-gray-300 py-2 px-3 rounded-4xl m-2 hover:bg-pink-500 hover:border-pink-500'><FontAwesomeIcon icon={faFacebookF} /></span></a>  
                       <a href='https://www.instagram.com/'target="_blank"><span className='border-2 border-gray-300 py-2 px-3 rounded-4xl m-2 hover:bg-pink-500 hover:border-pink-500'><FontAwesomeIcon icon={faInstagram} /></span></a>  
                       <a href='https://www.snapchat.com/ar'target="_blank"><span className='border-2 border-gray-300 py-2 px-3 rounded-4xl m-2 hover:bg-pink-500 hover:border-pink-500'><FontAwesomeIcon icon={faSnapchat} /></span></a>  
@@ -47,10 +47,10 @@ const Footer = () => {
                     </div>
                 </div>
                 {/**Div   4*/}
-                <div className='max-lg:col-span-2 max-md:col-span-1'>
+                <div className='max-lg:col-span-2 max-md:col-span-2'>
                     <h1 className='text-2xl my-2 '>Get in touch</h1>
                     <div className='grid grid-cols-1 text-gray-400 py-3'>
-                        <a href='mailto:rahmahosam111@gmail.com' className='py-2  hover:text-pink-500 text-wrap' >supprt@gmail.com</a>
+                        <a href='mailto:rahmahosam111@gmail.com' className='py-2  hover:text-pink-500 text-wrap ' >supprt@gmail</a>
                         <a href='#' className='py-2  hover:text-pink-500'>+1 854 256 32 32</a>
                         <address className='w-30'>Hammond, New York,13646</address>
 

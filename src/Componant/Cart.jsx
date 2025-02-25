@@ -7,7 +7,7 @@ const Cart = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
   const totalPrice = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   return (
-    <div className=" absolute top-14 right-10 w-120 h-auto bg-white shadow-lg p-5 z-50 overflow-y-auto rounded-2xl max-md:w-auto ">
+    <div className=" absolute top-14 right-10 w-120 h-auto bg-white shadow-lg p-5 z-50 overflow-y-auto rounded-2xl max-md:w-auto max-sm:right-0 ">
       <button onClick={onClose} className="absolute top-2 right-4 text-lg font-bold cursor-pointer">✖</button>
       <div className="flex justify-between mt-5">
         <h2 className="text-xl font-bold px-5 ">Your Cart</h2>

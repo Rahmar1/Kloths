@@ -17,7 +17,7 @@ const About = () => {
             </div>
             <div className='flex justify-between h-170  mt-10 max-lg:block mb-25 container justify-self-center  '>
                 <div className=' my-5  max-lg:w-auto justify-self-center'>
-                    <img src='https://cdn.prod.website-files.com/66bf11df879adcab99a88dbf/6732fc377830f623db16f2aa_Single-col-image2.avif' className='w-auto h-auto rounded-2xl  ' ></img>
+                    <img src='https://cdn.prod.website-files.com/66bf11df879adcab99a88dbf/6732fc377830f623db16f2aa_Single-col-image2.avif' className='w-auto h-auto rounded-2xl max-sm:p-3  ' ></img>
                 </div>
                 <div className=' align-middle w-1/2 text-left max-md:text-center p-10 mt-10 max-md:my-10  max-lg:w-auto'>
                     <h1 className='text-6xl my-2 ml-4 max-md:ml-0'>
@@ -71,8 +71,8 @@ Trend
                     <img src='https://cdn.prod.website-files.com/66bf11df879adcab99a88dbf/67331dc8759c2413f3d77de6_Blog2.avif' className='w-auto h-auto rounded-4xl p-5 m-8 max-lg:m-0 max-md:p-2'></img>
                 </div>
             </div>
-            <div className='my-40'>
-                <h1 className='text-6xl text-center'>What our client say</h1>
+            <div className='my-40 max-lg:mb-0'>
+                <h1 className='text-6xl text-center p-2'>What our client say</h1>
                <Clint/>
             </div>
             <Footer/>

@@ -14,7 +14,7 @@ const Header = () => {
         <div>
             <div className='container justify-self-center mt-30 max-md:mt-10 h-150 max-md:ml-7 max-md:w-auto'>
                    <h1 className='text-9xl text-wrap w-250 font-extralight tracking-wide uppercase mb-5 max-xl:text-8xl max-xl:w-200 max-lg:text-6xl max-lg:w-150 max-md:text-5xl max-md:leading-15 max-md:w-auto '>Elevate your <b >style</b> with trend</h1>
-             <button className='border-2 p-3 w-30 rounded-2xl m-3 bg-black text-white hover:bg-pink-600 transition ease-in-out duration-300 cursor-pointer ' onClick={() => navigate('/Shop')}> Shop Now</button>
+             <button className=' p-3  w-30 rounded-2xl m-3 bg-black text-white hover:bg-pink-600 transition ease-in-out duration-300 cursor-pointer ' onClick={() => navigate('/Shop')}> Shop Now</button>
             </div>
           <div>
             

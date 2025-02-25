@@ -5,8 +5,8 @@ import React from 'react';
 const Clint = () => {
     return (
         <div>
-            <div  className='flex text-center my-30 h-auto max-lg:block max-lg:mt-150 max-md:mt-50' >
-                <div className='max-lg:my-30 '>
+            <div  className='flex text-center my-30 h-auto max-lg:block max-lg:mt-130 max-md:mt-20 max-sm:mt-0' >
+                <div className='max-lg:mt-30 max-lg:mb-30 maxmd:mt-0 '>
 
                     <span className='text-2xl text-white bg-pink-600 px-4 py-5 m-8 rounded-4xl '><FontAwesomeIcon icon={faQuoteLeft} size='2xl' /></span>
                     <p className='italic text-lg m-8 font-medium text-wrap' >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>

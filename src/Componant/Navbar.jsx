@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState , useContext} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faMagnifyingGlass, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMagnifyingGlass, faShoppingCart,faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from 'react-router-dom';
 import SearchModal from "./SearchModal";
+import { AuthContext } from "../Context/AuthContext";
 const Navbar = ({ onCartClick }) => {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const { user, logout } = useContext(AuthContext);
+
+   
     return (
         <>
                 <div className=' flex justify-between p-5 container justify-self-center '>
@@ -30,8 +34,19 @@ const Navbar = ({ onCartClick }) => {
 
 
                 <div className='flex gap-4 max-lg:hidden'>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' onClick={() => setIsSearchOpen(true)} className='text-white bg-black p-2 rounded-3xl hover:bg-pink-600 transition-all duration-250' />
-                   
+                    <FontAwesomeIcon icon={faMagnifyingGlass} size='lg' onClick={() => setIsSearchOpen(true)} className='text-white bg-black p-2 rounded-3xl hover:bg-pink-600 transition-all duration-250 cursor-pointer' />
+                    
+                        
+                    {user ? (
+                    <div className="flex gap-2 items-center">
+                        <span className="font-medium">{user.name}</span>
+                        <button onClick={logout} className="text-pink-500 font-medium border-2 p-1 rounded-2xl cursor-pointer  hover:text-red-500">Logout</button>
+                    </div>
+                ) : (
+                    <FontAwesomeIcon icon={faCircleUser} size='lg' className='text-white bg-black p-2 rounded-3xl hover:bg-pink-600 transition-all duration-250 cursor-pointer' onClick={() => navigate('/Login')} />
+                )}
+          
+
                     <button className='text-lg font-medium cursor-pointer relative' onClick={onCartClick}>
                         <FontAwesomeIcon icon={faShoppingCart} /> Cart
                     </button>
@@ -58,8 +73,18 @@ const Navbar = ({ onCartClick }) => {
                     <button className='text-lg font-medium cursor-pointer relative' onClick={onCartClick}>
                         <FontAwesomeIcon icon={faShoppingCart} /> Cart
                     </button>
+                    {user ? (
+                    <div className="flex gap-2 items-center justify-self-center justify-between">
+                        
+                        <button onClick={logout} className="text-pink-500 font-medium border-2 p-1 rounded-2xl cursor-pointer  hover:text-red-500">Logout</button>
+                    </div>
+                ) : (
+                    <FontAwesomeIcon icon={faCircleUser} size='lg' className='text-white justify-self-center bg-black p-2 text-center rounded-3xl hover:bg-pink-600 transition-all duration-250 cursor-pointer' onClick={() => navigate('/Login')} />
+                )}
+                    
                 </div>
-                   
+                
+          
                 </div>
                 
             )} {isSearchOpen && <SearchModal onClose={() => setIsSearchOpen(false)} />}
