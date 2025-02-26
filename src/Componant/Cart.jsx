@@ -9,11 +9,11 @@ const Cart = ({ isOpen, onClose }) => {
   return (
     <div className=" absolute top-14 right-10 w-120 h-auto bg-white shadow-lg p-5 z-50 overflow-y-auto rounded-2xl max-md:w-auto max-sm:right-0 ">
       <button onClick={onClose} className="absolute top-2 right-4 text-lg font-bold cursor-pointer">✖</button>
-      <div className="flex justify-between mt-5">
-        <h2 className="text-xl font-bold px-5 ">Your Cart</h2>
+      <div className="flex justify-between my-5">
+        <h2 className="text-2xl align-middle font-bold px-5 ">Your Cart</h2>
         <button
               onClick={clearCart}
-              className=" bg-red-600 w-auto p-2 text-white  rounded-md hover:bg-red-700 transition "
+              className=" bg-red-600 w-auto p-2 text-white cursor-pointer  rounded-md hover:bg-red-700 transition "
             >
               Delete All
             </button>
@@ -22,12 +22,12 @@ const Cart = ({ isOpen, onClose }) => {
 
       {cartItems.length === 0 ? (
         
-        <p className="text-gray-500 text-center">No items in cart.</p>
+        <p className="text-gray-500 text-center py-5">No items in cart.</p>
         
       ) : (
 
         cartItems.map((item) => (
-          <div key={`${item.id}-${item.color}`} className="border-b py-4 flex items-center justify-between hover:bg-pink-100  p-2">
+          <div key={`${item.id}-${item.color}`} className="border-b py-4 flex items-center justify-between hover:bg-pink-100 mt-5 p-2">
             <img src={item.image} className="w-16 h-16 object-contain border rounded-md cursor-pointer " onClick={() => navigate(`/product/${item.id}`)} alt={item.title} />
             <div className="flex-1 px-4">
               <p className="font-semibold">{item.title}</p>

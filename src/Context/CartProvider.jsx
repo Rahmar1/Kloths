@@ -30,9 +30,9 @@ export const CartProvider = ({ children }) => {
       return [...prevItems, { ...item, quantity: item.quantity }];
     });
 
-    // ✅ عرض الإشعار **فقط** إذا كان المنتج جديدًا
+
     if (!itemExists) {
-      toast.success('تمت إضافة المنتج إلى العربة!', { position: "top-right" });
+      toast.success('Added To The Cart Successfully!', { position: "top-right" });
     }
   };
 
@@ -48,12 +48,12 @@ export const CartProvider = ({ children }) => {
 
   const removeFromCart = (itemId, color) => {
     setCartItems((prevItems) => prevItems.filter(item => !(item.id === itemId && item.color === color)));
-    toast.info('تمت إزالة المنتج من العربة', { position: "top-right" });
+    toast.info('Removed From Cart Successfully', { position: "top-right" });
   };
   const clearCart = () => {
-    setCartItems([]); // يمسح كل المنتجات
-    localStorage.removeItem("cartItems"); // يزيل البيانات من Local Storage
-    toast.info('تم إفراغ العربة بنجاح!', { position: "top-right" });
+    setCartItems([]);
+    localStorage.removeItem("cartItems"); 
+    toast.info('Cart Empty ', { position: "top-right" });
   };
   
   return (

@@ -8,12 +8,11 @@ const Products = () => {
   const [category, setCategory] = useState("all");
   const { addToCart } = useContext(CartContext);
 
-  //  جلب البيانات من API
+
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
       .then((data) => {
-        //  استبعاد الإلكترونيات
         const filteredData = data.filter(
           (product) => product.category !== "electronics"
         );
@@ -24,7 +23,7 @@ const Products = () => {
   }, []);
 
   
-  //  فلترة المنتجات حسب الفئة المختارة
+
   const filteredProducts =
     category === "all"
       ? products
@@ -33,12 +32,10 @@ const Products = () => {
   const navigate = useNavigate();
   return (
     <div className="container mx-auto p-8 my-10">
-      {/*  عنوان الصفحة */}
       <h1 className="text-4xl font-bold mb-6 text-center uppercase tracking-wide">
         Our Latest Fashion Trends
       </h1>
 
-      {/*  أزرار الفئات */}
       <div className="flex justify-center gap-3 mb-6 max-md:gap-2">
         {["all", "men's clothing", "women's clothing", "jewelery"].map((cat) => (
           <button
@@ -55,7 +52,6 @@ const Products = () => {
         ))}
       </div>
 
-      {/*  عرض المنتجات */}
       {loading ? (
         <p className="text-center text-gray-500">Loading...</p>
       ) : (
@@ -74,7 +70,7 @@ const Products = () => {
               <h2 className="text-lg font-semibold my-2">{product.title.slice(0,22)}</h2>
               <p className="text-gray-600">${product.price}</p>
           
-              <button className="mt-7 w-60 text-center align-bottom bg-black text-white py-2 rounded-md hover:bg-pink-600 transition max-xl:w-40 " onClick={() => navigate(`/product/${product.id}`)}>
+              <button className="mt-7 w-60 text-center align-bottom bg-black text-white py-2 rounded-md hover:bg-pink-600 transition max-xl:w-40 cursor-pointer " onClick={() => navigate(`/product/${product.id}`)}>
                             Add to Cart
                         </button>
             </div>

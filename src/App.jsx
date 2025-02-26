@@ -10,16 +10,19 @@ import Card from './Componant/Card';
 import  Contact  from './Componant/Contacts/Contacts';
 import { ToastContainer } from 'react-toastify';
 import { AuthProvider } from "./Context/AuthContext";
+import {FavoriteProvider } from './Context/FavoriteContext';
 import ProtectedRoute from "./Componant/ProtectedRoute";
 import Login from './Componant/Login';
 
 import SignUp from './Componant/SignUp';
+import Favorites from './Componant/Favorites';
 function App() {
 
  
   return (
     <AuthProvider>
     <CartProvider>
+    <FavoriteProvider>
       <Router>
      
         <Routes>
@@ -31,8 +34,10 @@ function App() {
           <Route path='/Contact' element={<Contact />} />
           <Route path='/Login' element={<Login />} />
           <Route path='/Signup' element={<SignUp />} />
+          <Route path="/Favorites" element={<Favorites />} />
         </Routes>
       </Router>
+      </FavoriteProvider>
       <ToastContainer />
     </CartProvider>
     </AuthProvider>
